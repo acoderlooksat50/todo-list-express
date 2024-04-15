@@ -19,29 +19,36 @@
 </head>
 <body>
     <h1>Todo List: </h1>
+    <!-- list that will be rendered using EJS -->
     <ul class="todoItems">
+        <!-- for loop which runs the length of the items -->
     <% for(let i=0; i < items.length; i++) {%>
         <li class="item">
+            <!-- if the item has the completed:true in the db the completed class attaches and renders as completed -->
             <% if(items[i].completed === true) {%>
                 <span class='completed'><%= items[i].thing %></span>
             <% }else{ %>
+            <!-- otherwise the item shows up regular -->
                 <span><%= items[i].thing %></span>
-            <% } %>    
+            <% } %>
+            <!--span that displays the font awesome trash can  -->
             <span class='fa fa-trash'></span>
         </li>
     <% } %>
     </ul>
-
+    <!-- renders the number of items left to do. the 'left' value comes from the server.js file.-->
     <h2>Left to do: <%= left %></h2>
 
     <h2>Add A Todo:</h2>
-
+    <!-- our create route which will add items to the db -->
     <form action="/addTodo" method="POST">
+    <!-- area to input new items -->
         <input type="text" placeholder="Thing To Do" name="todoItem">
+    <!-- submit button -->
         <input type="submit">
     </form>
     
-
+    <!-- linking the client side js..our listening smurfs -->
     <script src='js/main.js'></script>
 </body>
 </html>

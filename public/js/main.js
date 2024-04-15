@@ -1,15 +1,16 @@
-const deleteBtn = document.querySelectorAll('.fa-trash')
-const item = document.querySelectorAll('.item span')
-const itemCompleted = document.querySelectorAll('.item span.completed')
+const deleteBtn = document.querySelectorAll('.fa-trash') //sets this class as a variable deletBtn
+const item = document.querySelectorAll('.item span') //sets this class as a variable item
+const itemCompleted = document.querySelectorAll('.item span.completed') //set this class as a variable itemCompleted
 
+//makes items in deleteBtn an array and adds an event listner to each one
 Array.from(deleteBtn).forEach((element)=>{
     element.addEventListener('click', deleteItem)
 })
-
+//makes items in item an array and adds an event listner to each one
 Array.from(item).forEach((element)=>{
     element.addEventListener('click', markComplete)
 })
-
+//makes items in itemCompleted an array and adds an event listner to each one
 Array.from(itemCompleted).forEach((element)=>{
     element.addEventListener('click', markUnComplete)
 })
