@@ -1,28 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<!DOCTYPE html> <!--HTML5 document type-->
+<html lang="en"> <!--default language is english-->
+<head> <!--opening head tag-->
+    <meta charset="UTF-8"> <!--document uses standard characters-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--sets compatibility with microsoft browsers-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--set viewport with to the width of the device being used, allows proper responsiveness of website-->
+    <title>Document</title> <!--document title-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css"> <!--these are links to style sheets-->
 </head>
-<body>
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+<body><!--probably a typo-->
+    <!DOCTYPE html> <!--probably a typo-->
+<html lang="en"> <!--probably a typo-->
+<head> <!--probably a typo-->
+    <meta charset="UTF-8"> <!--probably a typo-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><!--probably a typo-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--probably a typo-->
+    <title>Document</title><!--probably a typo-->
+</head><!--probably a typo-->
+<body> <!--actual opening body tag, everything below will be displayed content-->
     <h1>Todo List: </h1>
     <!-- list that will be rendered using EJS -->
     <ul class="todoItems">
         <!-- for loop which runs the length of the items -->
-    <% for(let i=0; i < items.length; i++) {%>
+    <% for(let i=0; i < items.length; i++) {%> <!--Use EJS to start a for loop-->
         <li class="item">
             <!-- if the item has the completed:true in the db the completed class attaches and renders as completed -->
             <% if(items[i].completed === true) {%>
@@ -50,5 +50,5 @@
     
     <!-- linking the client side js..our listening smurfs -->
     <script src='js/main.js'></script>
-</body>
-</html>
+</body> <!--closing body tag-->
+</html> <!--closing html tag-->
