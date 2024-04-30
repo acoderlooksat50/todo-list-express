@@ -15,21 +15,21 @@ Array.from(itemCompleted).forEach((element)=>{
     element.addEventListener('click', markUnComplete)
 })
 
-async function deleteItem(){
-    const itemText = this.parentNode.childNodes[1].innerText
+async function deleteItem(){  //starts an async function
+    const itemText = this.parentNode.childNodes[1].innerText //variable that will hold the text from the list item span
     try{
-        const response = await fetch('deleteItem', {
-            method: 'delete',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({
-              'itemFromJS': itemText
+        const response = await fetch('deleteItem', { //response variable 
+            method: 'delete', //delete method
+            headers: {'Content-Type': 'application/json'}, //header content type of json
+            body: JSON.stringify({ //body that will be string of JSON
+              'itemFromJS': itemText  //itemFromJS will be the innerText from the list item span
             })
           })
-        const data = await response.json()
+        const data = await response.json() 
         console.log(data)
         location.reload()
 
-    }catch(err){
+    }catch(err){ //returns an error if the try does not work
         console.log(err)
     }
 }
